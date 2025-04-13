@@ -1,0 +1,306 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Dimensione minima del testo */
+}
+header, nav, section, footer {
+    padding: 20px;
+    margin: 10px;
+}
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+nav {
+    background: #e0e0e0; /* Sfondo più chiaro per migliorare il contrasto */
+    text-align: center;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+nav a:focus, nav a:hover {
+    outline: 2px solid #005fcc; /* Bordo visibile per il focus */
+    color: #005fcc; /* Cambiamento di colore per hover e focus */
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Stile per la sezione "projects" */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#projects article {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Prefisso per Safari */
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Prefisso per Firefox */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prefisso per Safari */
+    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prefisso per Firefox */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects article:hover {
+    -webkit-transform: translateY(-5px); /* Prefisso per Safari */
+    -moz-transform: translateY(-5px); /* Prefisso per Firefox */
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Prefisso per Safari */
+    -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Prefisso per Firefox */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#projects img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#projects h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#projects p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Stile per i pulsanti di filtro */
+.filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #005fcc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #004bb5;
+}
+
+/* Stile per il lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Stile per la sezione "Chi Sono" */
+#about {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile per la lista delle competenze */
+#skills ul {
+    list-style: none; /* Rimuove i bullet point predefiniti */
+    padding: 0;
+}
+
+#skills li {
+    position: relative;
+    padding-left: 30px; /* Spazio per l'icona */
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#skills li::before {
+    content: "✔"; /* Icona o simbolo */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    color: #005fcc; /* Colore dell'icona */
+    line-height: 1.2;
+}
+
+/* Immagini e video responsivi */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Stile per la sezione "Contatti" */
+#contact {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+#contact label {
+    font-size: 1rem;
+    color: #333;
+    align-self: flex-start;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #005fcc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 95, 204, 0.5);
+}
+
+#contact button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #005fcc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #004bb5;
+}
+
+/* Stile per i messaggi di errore */
+.error-message {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none; /* Nascondi i messaggi di errore inizialmente */
+}
+
+/* Stile per i campi con errore */
+input.error, textarea.error {
+    border-color: #ff0000;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Media query per schermi con larghezza massima di 768px */
+@media (max-width: 768px) {
+    /* Navigazione mobile-friendly */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0; /* Spazio verticale tra i link */
+        font-size: 1.2rem; /* Testo più grande per dispositivi mobili */
+    }
+
+    /* Aggiunta di un'icona hamburger */
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        display: none; /* Nascondi i link di navigazione inizialmente */
+    }
+
+    nav.active a {
+        display: block; /* Mostra i link quando il menu è attivo */
+    }
+}
+
+
+

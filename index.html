@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personale di Leonardo Scala, sviluppatore web specializzato in HTML5, CSS3, JavaScript, React, Node.js e altro. Scopri i miei progetti e competenze.">
+    <title>Portfolio di Leonardo Scala - Sviluppatore Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <h1>Il Mio Portfolio</h1>
+        <p>Benvenuti nel mio portfolio personale</p>
+    </header>
+
+    <nav aria-label="Navigazione principale">
+        <span class="hamburger-menu" aria-label="Apri menu">&#9776;</span>
+        <a href="#about">Chi Sono</a>
+        <a href="#projects">Progetti</a>
+        <a href="#skills">Competenze</a>
+        <a href="#contact">Contatti</a>
+    </nav>
+
+    <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">Chi Sono</h2>
+        <p>Mi chiamo Leonardo Scala e sono uno sviluppatore web appassionato di creare esperienze digitali uniche.</p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Progetti</h2>
+
+        <!-- Pulsanti di filtro -->
+        <div class="filters">
+            <button class="filter-button" data-category="all">Tutti</button>
+            <button class="filter-button" data-category="responsive">Responsive</button>
+            <button class="filter-button" data-category="interactive">Interattivi</button>
+        </div>
+
+        <span class="project-list">
+            <article data-category="responsive">
+                <h3>Sito web responsive</h3>
+                <p>Un progetto che dimostra un design adattabile a diversi dispositivi.</p>
+                <img src="images/sito-web-responsive.png" alt="Screenshot del Progetto 1">
+            </article>
+            <article data-category="interactive">
+                <h3>Applicazione web interattiva</h3>
+                <p>Una web app interattiva con funzionalità di trascinamento e rilascio.</p>
+                <img src="images/sito-web-interattiva.png" alt="Screenshot del Progetto 2">
+            </article>
+        </span>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Competenze</h2>
+        <ul>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>Frameworks: React, Angular</li>
+            <li>Backend: Node.js, Express</li>
+            <li>Database: MongoDB, MySQL</li>
+            <li>Version Control: Git, GitHub</li>
+        </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contatti</h2>
+
+        <form id="contact-form" action="submit_form.php" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message"></span>
+
+            <label for="message">Messaggio:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error-message"></span>
+
+            <button type="submit" aria-label="Invia il modulo">Invia</button>
+        </form>
+    </section>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Il Mio Portfolio. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
